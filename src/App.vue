@@ -1,14 +1,22 @@
 <template>
-  <HelloWorld title="Hello" />
+  <div id="app">
+    <HelloWorld title="computed" />
+  </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'App',
+  name: 'app',
   components: {
-    HelloWorld
+    HelloWorld,
+  },
+  data() {
+    return {
+      message: 'validate',
+      num: 1,
+    }
   }
 }
 </script>

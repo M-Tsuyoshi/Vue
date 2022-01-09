@@ -1,11 +1,13 @@
 <template>
-  <div class="alert alert-info">
-    <h2>{{title}}</h2>
-    <p>{{message}}</p>
+  <div class="alert alert-primary">
+    <h1>{{title}}</h1>
+    <pre>{{message}}</pre>
     <hr>
-    <div>
-      <input class="form-control" type="text" v-model="input">
-      <button class="btn btn-info mt-2" @click="doAction">Click</button>
+    <div class="area"
+      @click.left.prevent="left"
+      @click.middle.prevent="middle"
+      @click.right.prevent="right">
+      click here!
     </div>
   </div>
 </template>
@@ -13,20 +15,54 @@
 <script>
 export default {
   name: 'HelloWorld',
-  props: {
-    title: String,
-    message: String,
-  },
-  data() {
+  data: function() {
     return {
-      message: 'お名前は？',
-      input:'no name',
+      title: 'Event',
+      message: '',
     }
   },
   methods: {
-    doAction() {
-      this.message = 'こんにちは、' + this.input + 'さん！'
+    left() {
+      this.message = '[left button]'
+    },
+    right() {
+      this.message = '[right button]'
+    },
+    middle() {
+      this.message = '[middle button]'
     }
-  }
+  },
 }
 </script>
+
+<style>
+pre {
+  font-size: 16pt;
+  line-height: 1.25;
+}
+div.out {
+  padding: 0;
+  background-color: #eee;
+  width: 300px;
+  height: 200px;
+}
+div.mid {
+  padding: 0;
+  background-color: #ddd;
+  width: 200px;
+  height: 170px;
+}
+div.in {
+  padding: 0;
+  background-color: #ccc;
+  width: 100px;
+  height: 140px;
+}
+.area {
+  width: 300px;
+  height: 100px;
+  background-color: #fff;
+  padding: 10px;
+  font-size: 20pt;
+}
+</style>
