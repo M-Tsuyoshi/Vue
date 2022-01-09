@@ -1,6 +1,5 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Vite" />
+  <HelloWorld title="Hello" message="※これは、Vue3のサンプルプロジェクトです。"/>
 </template>
 
 <script>
