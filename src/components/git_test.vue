@@ -1,4 +1,4 @@
 <html>
 <head></head>
-<body></body>
+<body>vite_app</body>
 </html>
