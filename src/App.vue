@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HelloWorld title="computed" />
+    <HelloWorld />  
   </div>
 </template>
 
@@ -12,11 +12,5 @@ export default {
   components: {
     HelloWorld,
   },
-  data() {
-    return {
-      message: 'validate',
-      num: 1,
-    }
-  }
 }
 </script>
